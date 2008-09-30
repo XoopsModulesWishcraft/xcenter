@@ -1,0 +1,4 @@
+RewriteRule ^centre/([a-zA-Z0-9\ \%\_\-]+)/([a-zA-Z0-9\ \%\_\-]+)/comment_([a-zA-Z0-9\&\%\?\_\.\-\=]+) modules/xcenter/comment_$3 [L,NC,QSA]
+RewriteRule ^centre/([a-zA-Z0-9\ \%\_\-]+)/([0-9]+) modules/xcenter/index.php?title=$1&center_id=$2  [L,NC,QSA]
+RewriteRule ^centre/([a-zA-Z0-9\ \%\_\-]+)/ modules/xcenter/index.php?title=$1  [L,NC,QSA]
+RewriteRule ^centre/ modules/xcenter/index.php [L,NC,QSA]
