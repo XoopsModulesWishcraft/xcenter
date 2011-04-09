@@ -1,0 +1,20 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^content/(.*?)/(.*?)/([0-9]+),([0-9]+).html$ modules/content/index.php?cat_title=$1&cont_title=$2&storyid=$3&catid=$4
+RewriteRule ^content/(.*?)/(.*?)/view.tag.php$ modules/content/view.tag.php
+RewriteRule ^content/(.*?)/(.*?)/list.tag.php$ modules/content/list.tag.php
+RewriteRule ^content/(.*?)/([0-9]+),([0-9]+).html$ modules/content/index.php?cont_title=$1&storyid=$2&catid=$3
+RewriteRule ^content/(.*?)/feed,([0-9]+).rss$ modules/content/rss.php?cat_title=$1&catid=$3
+RewriteRule ^content/(.*?)/pdf,([0-9]+).pdf$ modules/content/pdf.php?cat_title=$1&storyid=$2
+RewriteRule ^content/(.*?)/view.tag.php$ modules/content/view.tag.php
+RewriteRule ^content/(.*?)/list.tag.php$ modules/content/list.tag.php
+RewriteRule ^content/feed,([0-9]+).rss$ modules/content/rss.php?catid=$1
+RewriteRule ^content/pdf,([0-9]+).pdf$ modules/content/pdf.php?storyid=$1
+RewriteRule ^content/view.tag.php$ modules/content/view.tag.php
+RewriteRule ^content/list.tag.php$ modules/content/list.tag.php
+RewriteRule ^content/$ modules/content/index.php$1
+RewriteRule ^content$ modules/content/index.php$1
+

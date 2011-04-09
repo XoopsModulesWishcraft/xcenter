@@ -1,0 +1,48 @@
+<{if $xoConfig.breadcrumb}><{include file="db:xcenter_breadcrumb.html"}><{/if}>
+<div style="float:right; clear:none">
+<{if $xoConfig.share}><div style="float:left;"><{$xoConfig.sharecode}></div><{/if}>
+<{if $xoConfig.rss && $catid}><div style="float:right;">&nbsp;<a href="<{$xoops_url}>/modules/xcenter/rss.php?catid=<{$catid}>"><img src="<{$xoops_url}>/modules/xcenter/images/rss.png"></a></div><{/if}>
+</div>
+<p style="clear:both; height:2px;">&nbsp;</p>
+<h1><{$xcenter_pagetitle}></h1>
+<div class="xoXcenter" id="xoXcenter">
+<{$xcenter_text}>
+</div>
+<div class="xoIconBar" id="xoIconBar">
+<{if $xoConfig.writtenby}><{$smarty.const._XTR_WRITTENBY}><a href="<{$xoops_url}>/userinfo.php?uid=<{$xoAuthor.uid}>"><{if $xoAuthor.name}><{$xoAuthor.name}><{else}><{$xoAuthor.uname}><{/if}></a>&nbsp;<{/if}><{$xoPubdate}>&nbsp;
+<{if $xoConfig.print}><a href="<{$xoops_url}>/modules/xcenter/print.php?storyid=<{$xoXcenter.storyid}>"><img src="<{$xoops_url}>/modules/xcenter/images/print.png"></a>&nbsp;<{/if}>
+<{if $xoConfig.pdf}><a href="<{$xoops_url}>/modules/xcenter/pdf.php?storyid=<{$xoXcenter.storyid}>"><img src="<{$xoops_url}>/modules/xcenter/images/pdf.png"></a>&nbsp;<{/if}>
+<div style="float:right; clear:none">
+<{if $xoops_isadmin}>
+<{if $xoXcenter.storyid}>
+<a href="<{$xoops_url}>/modules/xcenter/admin/index.php?op=edit&fct=xcenter&storyid=<{$xoXcenter.storyid}>"><img src="<{$xoops_url}>/modules/xcenter/images/edit.png"></a>&nbsp;
+<a href="<{$xoops_url}>/modules/xcenter/admin/index.php?op=delete&fct=xcenter&storyid=<{$xoXcenter.storyid}>"><img src="<{$xoops_url}>/modules/xcenter/images/delete.png"></a>&nbsp;
+<a href="<{$xoops_url}>/modules/xcenter/admin/index.php?op=copy&fct=xcenter&storyid=<{$xoXcenter.storyid}>"><img src="<{$xoops_url}>/modules/xcenter/images/copy.png"></a>&nbsp;
+<{/if}>
+<{else}>
+<{if $xoXcenter.storyid}>
+<{if $xoXcenter.hasEdit}><a href="<{$xoops_url}>/modules/xcenter/manage.php?op=edit&fct=xcenter&storyid=<{$xoXcenter.storyid}>"><img src="<{$xoops_url}>/modules/xcenter/images/edit.png"></a>&nbsp;<{/if}>
+<{if $xoXcenter.hasDelete}><a href="<{$xoops_url}>/modules/xcenter/manage.php?op=delete&fct=xcenter&storyid=<{$xoXcenter.storyid}>"><img src="<{$xoops_url}>/modules/xcenter/images/delete.png"></a>&nbsp;<{/if}>
+<{if $xoXcenter.hasCopy}><a href="<{$xoops_url}>/modules/xcenter/manage.php?op=copy&fct=xcenter&storyid=<{$xoXcenter.storyid}>"><img src="<{$xoops_url}>/modules/xcenter/images/copy.png"></a>&nbsp;<{/if}>
+<{/if}>
+<{/if}>
+</div></div>
+<{if $tagbar}><{include file="db:tag_bar.html"}><{/if}>
+<{if $xoXcenter.nocomments == 0}>
+<br /><br /><br />
+<div style="text-align: center; padding: 3px; margin: 3px;">
+  <{$commentsnav}>
+  <{$lang_notice}>
+</div> 
+<div style="margin: 3px; padding: 3px;">
+<!-- start comments loop -->
+<{if $comment_mode == "flat"}>
+  <{include file="db:system_comments_flat.html"}>
+<{elseif $comment_mode == "thread"}>
+  <{include file="db:system_comments_thread.html"}>
+<{elseif $comment_mode == "nest"}>
+  <{include file="db:system_comments_nest.html"}>
+<{/if}>
+<!-- end comments loop -->
+</div>
+<{/if}>
