@@ -1,0 +1,20 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^xcenter/(.*?)/(.*?)/([0-9]+),([0-9]+).html$ modules/xcenter/index.php?cat_title=$1&cont_title=$2&storyid=$3&catid=$4
+RewriteRule ^xcenter/(.*?)/(.*?)/view.tag.php$ modules/xcenter/view.tag.php
+RewriteRule ^xcenter/(.*?)/(.*?)/list.tag.php$ modules/xcenter/list.tag.php
+RewriteRule ^xcenter/(.*?)/([0-9]+),([0-9]+).html$ modules/xcenter/index.php?cont_title=$1&storyid=$2&catid=$3
+RewriteRule ^xcenter/(.*?)/feed,([0-9]+).rss$ modules/xcenter/rss.php?cat_title=$1&catid=$3
+RewriteRule ^xcenter/(.*?)/pdf,([0-9]+).pdf$ modules/xcenter/pdf.php?cat_title=$1&storyid=$2
+RewriteRule ^xcenter/(.*?)/view.tag.php$ modules/xcenter/view.tag.php
+RewriteRule ^xcenter/(.*?)/list.tag.php$ modules/xcenter/list.tag.php
+RewriteRule ^xcenter/feed,([0-9]+).rss$ modules/xcenter/rss.php?catid=$1
+RewriteRule ^xcenter/pdf,([0-9]+).pdf$ modules/xcenter/pdf.php?storyid=$1
+RewriteRule ^xcenter/view.tag.php$ modules/xcenter/view.tag.php
+RewriteRule ^xcenter/list.tag.php$ modules/xcenter/list.tag.php
+RewriteRule ^xcenter/$ modules/xcenter/index.php$1
+RewriteRule ^xcenter$ modules/xcenter/index.php$1
+

@@ -1,0 +1,16 @@
+<script language="javascript" type="text/javascript">
+<{if $xoConfig.multilingual}>
+function doJSON_LoadPageForm() {
+	var params = new Array();
+ 	$.getJSON("<{$xoops_url}>/modules/<{$xoModule.dirname}>/dojson_loadform.php?useradmin=1&passkey=<{$passkey}>&form=<{$smarty.const._XTR_URL_FORM_BLOCK}>&blockid=<{$block.blockid}>&language=" + $('#language :selected').text(), params, refreshformdesc);
+}
+<{else}>
+function doJSON_LoadPageForm() {
+	var params = new Array();
+ 	$.getJSON("<{$xoops_url}>/modules/<{$xoModule.dirname}>/dojson_loadform.php?useradmin=1&passkey=<{$passkey}>&form=<{$smarty.const._XTR_URL_FORM_BLOCK}>&blockid=<{$block.blockid}>", params, refreshformdesc);
+}
+<{/if}>
+</script><body onLoad="javascript:doJSON_LoadPageForm();" />
+<{$usermenu}>
+<h1 id="headertitle"><{$smarty.const._XTR_AD_BLOCK_TITLEA}>&nbsp;-&nbsp;<{if $block.blockid}><{$block.blockid}><{else}><{$smarty.const._XTR_AD_BLOCK_TITLEB}><{/if}></h1>
+<p align="center" id='forms'></p>
