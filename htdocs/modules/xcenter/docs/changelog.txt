@@ -1,0 +1,8 @@
+========================================
+ 2012/04/05 5:51:01 Version 2.16 STABLE
+========================================
+ - Changed /admin/header.php Support for Module Class framework (wishcraft)
+ - Changed /admin/index.php Dashboard and About Added (wishcraft)
+ - Changed /admin/menu.php Dashboard and About Added (wishcraft)
+ - Changed /language/english/admin.php Dashboard and About Added (wishcraft)
+ - Changed /language/english/modinfo.php Dashboard and About Added (wishcraft) 
