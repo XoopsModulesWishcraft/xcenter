@@ -20,9 +20,9 @@ License: See /docs - GPL 2.0
 	require_once (dirname(dirname(dirname(dirname(__FILE__)))).'/include/cp_header.php');
 	
 	if (!defined('_CHARSET'))
-		define ("_CHARSET","UTF-8");
+		define("_CHARSET","UTF-8");
 	if (!defined('_CHARSET_ISO'))
-		define ("_CHARSET_ISO","ISO-8859-1");
+		define("_CHARSET_ISO","ISO-8859-1");
 		
 	$GLOBALS['myts'] = MyTextSanitizer::getInstance();
 	

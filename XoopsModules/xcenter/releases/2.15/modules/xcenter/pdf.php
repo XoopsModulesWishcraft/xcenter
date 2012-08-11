@@ -106,12 +106,12 @@ else {
 
 	$pdf_data['xcenter'] = $xcenter;
 	
-	define ('PDF_CREATOR', $GLOBALS['xoopsConfig']['sitename']);
-	define ('PDF_AUTHOR', $pdf_data['author']);
-	define ('PDF_HEADER_TITLE', $pdf_data['title']);
-	define ('PDF_HEADER_STRING', $pdf_data['subtitle']);
-	define ('PDF_HEADER_LOGO', 'logo.png');
-	define ('K_PATH_IMAGES', XOOPS_ROOT_PATH.'/images/');
+	define('PDF_CREATOR', $GLOBALS['xoopsConfig']['sitename']);
+	define('PDF_AUTHOR', $pdf_data['author']);
+	define('PDF_HEADER_TITLE', $pdf_data['title']);
+	define('PDF_HEADER_STRING', $pdf_data['subtitle']);
+	define('PDF_HEADER_LOGO', 'logo.png');
+	define('K_PATH_IMAGES', XOOPS_ROOT_PATH.'/images/');
 	
 	require_once XOOPS_ROOT_PATH.'/Frameworks/tcpdf/tcpdf.php';
 	
@@ -160,7 +160,7 @@ else {
 	//$pdf->SetHeaderData('', '', $firstLine, $secondLine);
 	//$pdf->SetHeaderData('logo_example.png', '25', $firstLine, $secondLine);
 	//UTF-8 char sample
-	//$pdf->SetHeaderData(PDF_HEADER_LOGO, '25', 'Éèéàùìò', $article->title());
+	//$pdf->SetHeaderData(PDF_HEADER_LOGO, '25', 'Ã‰Ã¨Ã©Ã Ã¹Ã¬Ã²', $article->title());
 	
 	//set margins
 	$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP + 10, PDF_MARGIN_RIGHT);
