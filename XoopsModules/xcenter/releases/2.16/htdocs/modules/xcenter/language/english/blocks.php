@@ -15,8 +15,8 @@ License: See /docs - GPL 2.0
 */
 
 include_once('modinfo.php');
-define('_XTR_ADDPAGE', 'Add Page');
+define('_XTR_ADDPAGE','Add Page');
 //BlOCKS
-define('_XTR_PAGE', 'Section on page');
-define('_XTR_NONE', 'None');
+define('_XTR_PAGE','Section on page');
+define('_XTR_NONE','None');
 ?>

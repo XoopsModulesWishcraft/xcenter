@@ -15,5 +15,5 @@ License: See /docs - GPL 2.0
 */
 
 include_once('modinfo.php');
-define('_XTR_ADDPAGE', 'Add Page');
+define('_XTR_ADDPAGE','Add Page');
 ?>

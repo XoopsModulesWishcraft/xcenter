@@ -13,11 +13,11 @@ Owner: Chronolabs
 License: See /docs - GPL 2.0
 */
 
-	xoops_loadlanguage('modinfo', 'xcenter');
+	xoops_loadlanguage('modinfo','xcenter');
 	//Permissions
-	define('_XTR_NOPERMSSET', 'No Permissions to Set!');
-	define('_XTR_PERMISSIONSVIEWCATEGORY', 'View Categories!');
-	define('_XTR_VIEW_FUNCTION', 'View');
-	define('_XTR_PERMISSIONSVIEWPAGE', 'View Xcenter Page');
+	define('_XTR_NOPERMSSET','No Permissions to Set!');
+	define('_XTR_PERMISSIONSVIEWCATEGORY','View Categories!');
+	define('_XTR_VIEW_FUNCTION','View');
+	define('_XTR_PERMISSIONSVIEWPAGE','View Xcenter Page');
 	
 ?>
